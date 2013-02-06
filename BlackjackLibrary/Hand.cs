@@ -62,6 +62,18 @@ namespace BlackjackLibrary
             }
 
         }
+
+        public bool IsBlackJack
+        {
+            get
+            {
+
+                return  this.Cards.Count == 2 
+                        && (this.Cards[0].HighValue == 11 || this.Cards[1].HighValue == 11) 
+                        && (this.Cards[0].HighValue == 10 || this.Cards[1].HighValue == 10);
+
+            }
+        }
         public List<int> Values
         {
             get
