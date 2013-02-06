@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blackjack_MVC", "Blackjack_MVC\Blackjack_MVC.csproj", "{FFE6765A-0942-4398-973A-B37EB0AF3FAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blackjack_MVC.Tests", "Blackjack_MVC.Tests\Blackjack_MVC.Tests.csproj", "{FC9B1D58-C800-4821-93B4-606EC16A1954}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlackjackLibrary", "BlackjackLibrary\BlackjackLibrary.csproj", "{2315BFA2-76F1-4643-BAAD-22F251089B14}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FFE6765A-0942-4398-973A-B37EB0AF3FAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFE6765A-0942-4398-973A-B37EB0AF3FAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFE6765A-0942-4398-973A-B37EB0AF3FAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFE6765A-0942-4398-973A-B37EB0AF3FAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC9B1D58-C800-4821-93B4-606EC16A1954}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC9B1D58-C800-4821-93B4-606EC16A1954}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC9B1D58-C800-4821-93B4-606EC16A1954}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC9B1D58-C800-4821-93B4-606EC16A1954}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2315BFA2-76F1-4643-BAAD-22F251089B14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2315BFA2-76F1-4643-BAAD-22F251089B14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2315BFA2-76F1-4643-BAAD-22F251089B14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2315BFA2-76F1-4643-BAAD-22F251089B14}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
