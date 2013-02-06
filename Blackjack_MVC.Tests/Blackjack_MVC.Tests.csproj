@@ -98,6 +98,8 @@
     <Compile Include="Deck_Test.cs" />
     <Compile Include="Shoe_Test.cs" />
     <Compile Include="Hand_Test.cs" />
+    <Compile Include="Player_Test.cs" />
+    <Compile Include="Game_Test.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App.config" />
