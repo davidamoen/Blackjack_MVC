@@ -109,5 +109,58 @@ namespace Blackjack_MVC.Tests
             Assert.IsFalse(hand.IsBust);
         }
 
+        [TestMethod]
+        public void IsBlackJack_Test()
+        {
+            Hand hand = new Hand();
+            hand.Cards.Add(new Card(Suit.Hearts, CardType.Ace));
+            hand.Cards.Add(new Card(Suit.Clubs, CardType.King));
+
+            Assert.IsTrue(hand.IsBlackJack);
+
+            hand = new Hand();
+            hand.Cards.Add(new Card(Suit.Hearts, CardType.Ace));
+            hand.Cards.Add(new Card(Suit.Clubs, CardType.Queen));
+
+            Assert.IsTrue(hand.IsBlackJack);
+
+            hand = new Hand();
+            hand.Cards.Add(new Card(Suit.Hearts, CardType.Ace));
+            hand.Cards.Add(new Card(Suit.Clubs, CardType.Jack));
+
+            Assert.IsTrue(hand.IsBlackJack);
+
+            hand = new Hand();
+            hand.Cards.Add(new Card(Suit.Hearts, CardType.Ace));
+            hand.Cards.Add(new Card(Suit.Clubs, CardType.Ten));
+
+            Assert.IsTrue(hand.IsBlackJack);
+
+        }
+
+        [TestMethod]
+        public void IsNotBlackJack_Test()
+        {
+
+            Hand hand = new Hand();
+            hand.Cards.Add(new Card(Suit.Hearts, CardType.Ace));
+            hand.Cards.Add(new Card(Suit.Clubs, CardType.Nine));
+
+            Assert.IsFalse(hand.IsBlackJack);
+
+            hand = new Hand();
+            hand.Cards.Add(new Card(Suit.Hearts, CardType.Ace));
+            hand.Cards.Add(new Card(Suit.Clubs, CardType.Ace));
+
+            Assert.IsFalse(hand.IsBlackJack);
+
+            hand = new Hand();
+            hand.Cards.Add(new Card(Suit.Hearts, CardType.Ace));
+            hand.Cards.Add(new Card(Suit.Clubs, CardType.King));
+            hand.Cards.Add(new Card(Suit.Clubs, CardType.Deuce));
+
+            Assert.IsFalse(hand.IsBlackJack);
+        }
+
     }
 }
