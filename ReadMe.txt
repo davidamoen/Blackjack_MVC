@@ -1,0 +1,1 @@
+A sample application that seeks to emulate the playing of Blackjack, and it eventually show that common strategies for playing the game are valid.  
