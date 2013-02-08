@@ -43,5 +43,12 @@ namespace BlackjackLibrary
             set { _bet = value; }
         }
 
+        public PlayerAction TakeTurn(Hand DealerHand)
+        {
+            return DecisionHelper.MakeDecision(DealerHand, this.Hand.First());
+        }
+
+
+
     }
 }

@@ -74,6 +74,22 @@ namespace BlackjackLibrary
 
             }
         }
+
+        public bool IsSplittable
+        {
+            get {
+                return this.Cards.Count == 2 && (this.Cards.First().CardType == this.Cards.Last().CardType);
+            }
+        }
+
+        public bool HasAce
+        {
+            get
+            {
+                return (from card in this.Cards where card.CardType == CardType.Ace select card).Count() > 0;
+            }
+        }
+
         public List<int> Values
         {
             get
