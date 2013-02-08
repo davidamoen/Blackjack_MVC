@@ -162,5 +162,40 @@ namespace Blackjack_MVC.Tests
             Assert.IsFalse(hand.IsBlackJack);
         }
 
+        [TestMethod]
+        public void IsSplittable_Test()
+        {
+            Hand hand = new Hand();
+            hand.Cards.Add(new Card(Suit.Hearts, CardType.Ace));
+            hand.Cards.Add(new Card(Suit.Clubs, CardType.Nine));
+            Assert.IsFalse(hand.IsSplittable);
+
+            hand = new Hand();
+            hand.Cards.Add(new Card(Suit.Hearts, CardType.Nine));
+            hand.Cards.Add(new Card(Suit.Clubs, CardType.Nine));
+            Assert.IsTrue(hand.IsSplittable);
+
+            hand = new Hand();
+            hand.Cards.Add(new Card(Suit.Hearts, CardType.Deuce));
+            hand.Cards.Add(new Card(Suit.Clubs, CardType.Deuce));
+            Assert.IsTrue(hand.IsSplittable);
+
+        }
+
+        [TestMethod]
+        public void HasAce_Test()
+        {
+            Hand hand = new Hand();
+            hand.Cards.Add(new Card(Suit.Hearts, CardType.Ace));
+            hand.Cards.Add(new Card(Suit.Clubs, CardType.Nine));
+            Assert.IsTrue(hand.HasAce);
+
+            hand = new Hand();
+            hand.Cards.Add(new Card(Suit.Hearts, CardType.Nine));
+            hand.Cards.Add(new Card(Suit.Clubs, CardType.Nine));
+            Assert.IsFalse(hand.HasAce);
+
+        }
+
     }
 }

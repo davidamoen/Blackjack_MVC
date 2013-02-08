@@ -8,6 +8,7 @@ namespace BlackjackLibrary
 {
     public class Card
     {
+        # region constructors
         public Card()
         {
         }
@@ -17,7 +18,9 @@ namespace BlackjackLibrary
             this.CardType = cardType;
             this.Suit = suit;
         }
+        # endregion
 
+        # region properties
         private Suit _suit;
         public Suit Suit
         {
@@ -31,6 +34,7 @@ namespace BlackjackLibrary
             get { return _cardtype; }
             set { _cardtype = value; }
         }
+        # endregion
 
         public int HighValue
         {
