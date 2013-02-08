@@ -12,7 +12,7 @@ namespace BlackjackLibrary
         {
         }
 
-        public Game(int playerCount)
+        public Game(int playerCount, int deckCount)
         {
             for (int i = 0; i < playerCount; i++)
             {
@@ -20,6 +20,8 @@ namespace BlackjackLibrary
             }
 
             _dealer = new Player("Dealer", 0);
+
+            //_shoe = new Shoe(deckCount);
         }
 
         Player _dealer;
@@ -32,6 +34,55 @@ namespace BlackjackLibrary
         public List<Player> Players
         {
             get { return _players; }
+        }
+
+        Shoe _shoe;
+        public Shoe Shoe
+        {
+            get
+            {
+                return _shoe;
+            }
+            set
+            {
+                _shoe = value;
+            }
+        }
+
+        public void PrepCards(int deckCount, int shuffleCount)
+        {
+
+            this.Shoe = new Shoe(deckCount);
+
+            this.Shoe.Shuffle(shuffleCount);
+
+            this.Shoe.AddRedCard();
+
+        }
+
+        public void Deal()
+        {
+            for (int i = 0; i < 2; i++)
+            {
+                foreach (Player player in this.Players)
+                {
+                    if (i == 0) {
+                        player.Hand = new List<Hand>();
+                        player.Hand.Add(new Hand());
+                    }
+
+                    player.Hand.First().Cards.Add(this.Shoe.Cards.Pop());
+                }
+
+                if (i == 0)
+                {
+                    this.Dealer.Hand = new List<Hand>();
+                    this.Dealer.Hand.Add(new Hand());
+                }
+
+                this.Dealer.Hand.First().Cards.Add(this.Shoe.Cards.Pop());
+
+            }
         }
 
     }
